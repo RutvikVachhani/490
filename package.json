@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "express-fileupload": "^1.2.1",
@@ -19,6 +20,7 @@
     "express-session": "^1.17.2",
     "http": "^0.0.1-security",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "pdf-parse": "^1.1.1",
     "pdfreader": "^1.2.14"
