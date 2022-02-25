@@ -7,9 +7,9 @@ const upload = require("express-fileupload");
 const flash = require("express-flash");
 
 //--------import Routes----------------//
-const loginRoute = require("./routes/login");
-const uploadRoute = require("./routes/upload");
-const profileRoute = require("./routes/profile");
+const loginRoute = require("./routes/loginRoute");
+const uploadRoute = require("./routes/uploadRoute");
+const profileRoute = require("./routes/profileRoute");
 
 //-----------app uses---------------------//
 app.use(express.urlencoded({ extended: false }));
@@ -30,8 +30,8 @@ app.use(
 
 //-------------routes------------------------//
 app.use("/", loginRoute);
-app.use("/", uploadRoute);
-app.use("/", profileRoute);
+app.use(uploadRoute);
+app.use(profileRoute);
 
 //-------------port-----------------------//
 const PORT = process.env.PORT || 3000;
