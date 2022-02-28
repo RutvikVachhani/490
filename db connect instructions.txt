@@ -57,7 +57,7 @@ Option 2 (Recommended Route):
         DB_USER=
         DB_NAME=
         DB_PASSWORD=
-3.) Create a .gitignore file include the file path of your .env file.
+3.) Create a .gitignore file include the file path of your .env file and your node_module file.
 
 4.) Save everything
 
