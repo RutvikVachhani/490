@@ -1,12 +1,68 @@
-You can use MySQL Workbench to connect to this
+****IMPORTANT****
 
-To connect to MySQL database ust the follwoing credentials:
-connection name = COMP490 (anything you want)
-host: "us-cdbr-east-05.cleardb.net",
-user: "b14065fc30e286",
-password: "68d7aec9",
-database: "heroku_6ee4a0fcdd21b51",
+Before connecting to MySQL you need to make sure you have the neccessay packages!
 
-and then you can create whatever table are necessary for you
+Steps:
 
-* We have 2 tables for now which can be found in '490_query.sql' 
+1.) Go to your terminal
+
+2.) If you don't already have node js installed, you need to install it by 
+navigating to their website: https://nodejs.org/en/download/
+
+3.) Navigate to the file path that you're gonna want to save this project in
+
+4.) Now, on that same terminal type in "git clone git@github.com:hrithik0073/490.git".
+
+5.) This will clone everything that you will need for this project, HOWEVER, you still need to install the neccessary packages onto your local machine. This will be done in step 5.
+
+6.) On your terminal type in "npm install" (Make sure you have the latest version by running "npm install -g npm" on your terminal )
+
+7.) Congrats, all your packages are installed
+
+
+*****Step-by-Step instructions to connect to your local MySQL Database ********
+
+There are two options: Easy route and the recommended route
+
+
+Option 1 (Easy route):
+1.) Navigate to the db_connect.js file and fill in your credentials.(The ones used to set up your MySQL Workbench). You should encounter the following:
+
+const con = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  multipleStatements: true,
+});
+
+Wherever you see "process.env.whatever" that is where you enter your info
+
+2.) Save your file
+
+3.) On your MySQL Workbench create your schema and set it as your default schema
+
+4.) Type in "node db_connect.js" on your terminal. Make sure you are in the right directory
+
+5.) If no errors than you are connected, congrats.
+
+Option 2 (Recommended Route):
+
+1.) Create a .env file
+
+2.) Copy and paste this into your .env file and fill in the blanks
+        NODE_ENV=development
+        PORT=
+        DB_HOST=
+        DB_USER=
+        DB_NAME=
+        DB_PASSWORD=
+3.) Create a .gitignore file include the file path of your .env file.
+
+4.) Save everything
+
+5.) Go to your MySQL Workbench, create your schema and set it as your default schema
+
+6.) Back on the terminal, type in "node db_connect.js"
+
+7.) If no errors, then congrats you are connected
