@@ -50,7 +50,7 @@ Option 2 (Recommended Route):
 
 1.) Create a .env file
 
-2.) Copy and paste this into your .env file and fill in the blanks
+2.) Copy and paste this into your .env file and fill in the blanks. (No need to change anything in the db_connect.js file.)
         NODE_ENV=development
         PORT=
         DB_HOST=
