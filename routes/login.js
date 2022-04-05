@@ -55,7 +55,6 @@ router.post("/loginUser", (req, res) => {
 
     if (username == 'admin' && password == 'admin') {
         res.redirect(307, '/adminHome');
-        exit();
     } else {
         if (username && password) {
             let sql = "SELECT * FROM student WHERE Username = '" + username + "' AND Password = '" + password + "';";
@@ -82,12 +81,6 @@ router.get("/logout", (req, res) => {
     console.log('session destroyed');
     req.session.destroy();
     res.redirect("/");
-})
-
-router.post("/adminHome", (req, res) => {
-    req.session.StudentId = 000000000;
-    req.session.save();
-    res.render('adminHome');
 })
 
 module.exports = router;

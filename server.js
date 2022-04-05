@@ -10,6 +10,7 @@ const flash = require('express-flash');
 const loginRoute = require('./routes/login');
 const uploadRoute = require('./routes/upload');
 const profileRoute = require('./routes/profile');
+const adminRoute = require('./routes/admin');
 
 //-----------app uses---------------------//
 app.use(express.urlencoded({ extended: false }));
@@ -31,6 +32,7 @@ app.use(session({
 app.use("/", loginRoute);
 app.use("/", uploadRoute);
 app.use("/", profileRoute);
+app.use("/", adminRoute);
 
 //-------------port-----------------------//
 const PORT = process.env.PORT || 5000;

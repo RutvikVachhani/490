@@ -114,12 +114,13 @@
                             <th>Course No.</th>
                         </tr>
                         <% data3.forEach(entry=> { %>
-                            <td>
-                                <%= entry.Department %>
-                            </td>
-                            <td>
-                                <%= entry.CourseNumber %>
-                            </td>
+                            <tr id="<%= entry.Department + entry.CourseNumber %>">
+                                <td>
+                                    <%= entry.Department %>
+                                </td>
+                                <td>
+                                    <%= entry.CourseNumber %>
+                                </td>
                             </tr>
                             <% }) %>
                     </table>
