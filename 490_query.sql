@@ -51,3 +51,5 @@ INSERT INTO PlannerCourses(StudentId, Department, CourseNumber, Credits) VALUES 
 INSERT INTO PlannerCourses(StudentId, Department, CourseNumber, Credits) VALUES (200507859, "COMP", "584", "3.0");
 
 Delete from PlannerCourses where Studentid = 200507859 AND DateCreated != "2022-04-03 20:54:33";
+
+Select Distinct Department, CourseNumber, count(CourseNumber) from PlannerCourses Group by Department,courseNumber;
